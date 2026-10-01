@@ -610,7 +610,6 @@ function card(v, original=false, pageStart=false, searchType='', related=false){
     <div class="vmeta"><span class="ref">${esc(SURAH_NAMES[v.s-1])} ${esc(v.id)}</span><span>${metaRight}</span></div>
     ${isRelated?`<button class="related-badge" data-act="related" data-id="${esc(v.id)}" title="Buka ${esc(primaryFlow.title)} di flow utamanya">Related</button>`:''}
     <div class="translation">${esc(v.idn || (translationState==='ready'?'Terjemahan tidak tersedia untuk ayat ini.':translationState==='error'?'Terjemahan Kemenag 2019 belum dapat dimuat. Pastikan koneksi internet aktif lalu muat ulang.':translationState==='partial'?'Sebagian terjemahan Kemenag 2019 belum berhasil dimuat. Muat ulang untuk melengkapi.':'Memuat terjemahan Kemenag 2019…'))}</div>
-    ${!original?`<div class="role">Peran: ${esc(v.role)}</div>`:''}
     <div class="arabic" lang="ar" dir="rtl">${esc(v.ar)}</div>
     <div class="labels"><button class="label" data-act="taf" data-id="${esc(v.id)}">Tafsir Muntakhab</button><button class="bookmark-btn ${saved?'saved':''}" data-act="bookmark" data-id="${esc(v.id)}" aria-label="${saved?'Hapus bookmark':'Bookmark'} ${esc(v.id)}"><span class="bookmark-star" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3.25l2.62 5.31 5.86.85-4.24 4.13 1 5.83L12 16.61 6.76 19.37l1-5.83L3.52 9.41l5.86-.85L12 3.25z"/></svg></span></button></div>
   </article>`
